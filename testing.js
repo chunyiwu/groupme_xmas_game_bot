@@ -7,10 +7,10 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /i/;
 
-  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
+  if(request.text && botRegex.test(request.text)) {
   } else {
     console.log("don't care");
     this.res.writeHead(200);
